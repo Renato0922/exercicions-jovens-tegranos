@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 02</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Insira os seguintes dados</h1>
+
+    <div class="container">
+      <label>Medida da altura</label><br />
+      <input id="altura" type="number" placeholder="Altura" />
+      <br />
+      <label>Medida da base</label><br />
+      <input id="base" type="number" placeholder="Base" />
+      <br /><br />
+      <button type="button" onclick="calculoDiagonal()">Calcular</button>
+      <p id="area"></p>
+      <br />
+      <p id="perimetro"></p>
+      <br />
+      <p id="resultado"></p>
+    </div>
+    <div class="informacoes">
+      <a><h2>Forma de se fazer:</h2></a>
+      <br />
+      <p>
+        A diagonal é a linha que vai <br />
+        de um canto do retângulo ao <br />
+        canto oposto e passa pelo <br />
+        centro do retângulo. Diagonais <br />
+        são linhas que unem dois vértices <br />
+        não adjacentes de <br />
+        um polígono, ou seja, diagonais <br />
+        unem dois vértices da figura <br />
+        excluindo os lados do <br />
+        polígono. As diagonais são <br />
+        calculadas usando a fórmula da diagonal <br />
+      </p>
+    </div>
+    <div class="img">
+      <img
+        src="data:image/png;base64,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"
+        alt=""
+      />
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

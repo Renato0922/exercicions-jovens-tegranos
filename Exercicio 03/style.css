@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 16px*/
+
+  --color-font: hsla(0, 0%, 100%, 0.902);
+  --color-1: hsl(235, 36%, 35%);
+  --color-2: hsl(230, 23%, 16%);
+}
+
+html,
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(40, 40, 40, 1);
+  font-size: 1.6rem;
+  font-family: 'Open sans', sans-serif;
+}
+
+h1 {
+  color: var(--color-font);
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+label {
+  color: var(--color-font);
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+input {
+  border-radius: 1000px;
+  margin-bottom: 10px;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+
+  background-color: var(--color-1);
+  color: var(--color-font);
+
+}
+
+button {
+  color: var(--color-font);
+  background-color: var(--color-2);
+
+  padding: 15px;
+  margin: 10px;  
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.display {
+    text-align: center;
+}
+
+.resultados {
+  color: var(--color-font);
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.noid,
+#nom1,
+#nom2 {
+  margin-left: -550px;
+}
+
+.noid2,
+#idad1,
+#idad2 {
+  margin-right: -550px;
+  margin-top: -5px;
+}
+
+#resultado {
+  margin-top: -100px;
+}
